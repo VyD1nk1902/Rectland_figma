@@ -1,0 +1,140 @@
+/* Bản màu */
+:root {
+  --primary: #021a84;
+  --secondary: #fe4c4c;
+  --text: #171717;
+  --dark-primary: #010d42;
+  --gray: #999;
+  --light-gray: #f2f2f2;
+  --light-gray2: #e5e5e5;
+  --green-text: #156d33;
+  --red-text: #e5532a;
+  --purple-text: #021a84;
+  --green-gradient: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    ),
+    #2ada66;
+  --purple-gradient: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    ),
+    #021a84;
+  --red-gradient: linear-gradient(0deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%),
+    #e5532a;
+  --green-banner-gradient: linear-gradient(221deg, #0cc64b 0%, #26ab5b 76.95%);
+}
+
+/* Font và size chung */
+html,
+body {
+  font-family: "Inter", serif;
+  font-size: 14px;
+  background-color: var(--light-gray);
+}
+
+.wrapper {
+  max-width: 1160px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* button chung */
+.btn {
+  height: 44px;
+  min-width: 155px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  color: inherit;
+}
+
+/* btn riêng 1 */
+.btn--border {
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  color: var(--primary);
+  transition: all 1s ease;
+  overflow: hidden;
+  position: relative;
+  text-transform: capitalize;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* hiệu ứng hover 1 */
+.btn--border::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+  transition: all linear 0.5s;
+}
+.btn--border:hover {
+  background-color: var(--light-gray);
+}
+.btn--border:hover::before {
+  left: 100%;
+}
+
+/* btn riêng 2 */
+.btn--solid {
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* hiệu ứng hover 2 */
+.btn--solid:hover::before {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.btn--solid::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #fff;
+  opacity: 0.1;
+  z-index: -1;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/* end Button */
+
+.heading {
+  color: var(--dark-primary);
+  font-weight: 700;
+  line-height: 48px;
+  font-size: 34px;
+}
+
+.btn-scrollTop {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 9999;
+}

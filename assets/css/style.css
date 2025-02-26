@@ -1,0 +1,596 @@
+.container {
+  padding-block: 40px;
+}
+
+/* Header */
+.header {
+  height: 80px;
+  background-color: #fff;
+}
+.header--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.header-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+/* end Header */
+
+/* Banner */
+.banner {
+  max-width: 100%;
+  width: 100%;
+  height: 721.013px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* end Banner */
+
+/* Search Bar */
+.search-bar {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.search-bar__input {
+  display: flex;
+  height: 51px;
+  align-items: center;
+  flex: 1 0 0;
+  padding: 13px 16px;
+  background: #fff;
+  backdrop-filter: blur(2px);
+  border-radius: 8px;
+  gap: 5px;
+  margin-right: 10px;
+}
+
+.search-icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar__input input {
+  width: 100%;
+  height: 100%;
+  border-color: transparent;
+}
+
+.search-bar__option {
+  display: flex;
+  width: 271px;
+  height: 50px;
+  padding: 8px 16px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background: #fff;
+  backdrop-filter: blur(2px);
+  margin-right: 10px;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+.search-bar__optionLeft {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+/* end Search Bar */
+
+/* List Suggest */
+.suggest-wrap {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.suggest-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.suggest-item {
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  user-select: none;
+}
+/* end List Suggest */
+
+/* Job List */
+.job-wrap {
+  margin-top: 77px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-heading-left {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.job-heading__iconWrap {
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 12.342px 30px 0px rgba(0, 0, 0, 0.08);
+}
+
+.job-heading__icon {
+  width: 52.89px;
+  height: 52.89px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.job-header__right {
+  font-weight: 500;
+  font-size: 18px;
+  width: 131px;
+  height: 44px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  gap: 10px;
+  color: var(--primary);
+  transition: linear 0.2s;
+}
+
+.job-header__right:hover {
+  text-decoration: underline;
+}
+
+.job-card__list {
+  display: grid; /*dạng lưới*/
+  grid-template-columns: repeat(3, 1fr); /*3 cột, mỗi cột rộng bằng nhau*/
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.job-card__item {
+  border-radius: 16px;
+  background: #fff;
+  padding: 16px;
+  border: 1px solid transparent;
+  transform: linear 0.2s;
+}
+
+.job-card__item:hover {
+  border-color: var(--primary);
+}
+
+.job-card-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid var(--light-gray2);
+}
+
+.job-card__nameWrap {
+  display: flex;
+  gap: 8px;
+  width: 253px;
+  align-items: flex-start;
+}
+
+.job-card__name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.job-card__time {
+  display: flex;
+  padding-block: 4px;
+  border-radius: 8px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%),
+    #021a84;
+  color: var(--primary);
+  width: 66px;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.job-card__body {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.job-card__body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 16px;
+  background-color: var(--light-gray2);
+} /*tạo dấu | ở giữa */
+
+.job-card__priceText {
+  color: var(--dark-primary);
+  font-size: 12px;
+}
+
+.job-card__priceNumber {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 4px;
+}
+
+.job-card__priceNumber span {
+  color: var(--gray);
+  font-weight: 400;
+}
+
+.job-card__footer {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-card__footerLeft {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.job-card__tag {
+  padding: 4px 16px;
+  border-radius: 8px;
+  background-color: var(--light-gray);
+  color: var(--dark-primary);
+}
+
+.job-card__footerRight {
+  padding: 4px 16px;
+  border-radius: 8px;
+  background-color: var(--secondary);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+/* end Job List */
+
+/* Introduce */
+.intro-wrap {
+  margin-top: 80px;
+}
+
+.heading-wrap {
+  text-align: center;
+}
+
+.sub-heading {
+  font-size: 18px;
+  color: var(--primary);
+}
+
+.intro-card__list {
+  margin-top: 40px;
+  display: flex;
+  gap: 32px;
+}
+
+.intro-card__item {
+  padding: 32px;
+  background: var(--green-gradient);
+  border-radius: 16px;
+  width: 100%;
+}
+
+.intro-card__item:nth-child(1) {
+  background: var(--green-gradient);
+  color: var(--green-text);
+}
+
+.intro-card__item:nth-child(2) {
+  background: var(--purple-gradient);
+  color: var(--purple-text);
+}
+
+.intro-card__item:nth-child(3) {
+  background: var(--red-gradient);
+  color: var(--red-text);
+}
+
+.intro-card__img {
+  margin-inline: auto;
+}
+
+.intro-card__title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.intro-card__desc {
+  text-align: center;
+  margin-top: 8px;
+}
+/* end Introduce */
+
+/* Partner */
+.partner-wrap {
+  margin-block: 80px; /*trên, dưới*/
+  text-align: center;
+}
+
+.partner-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 60px;
+}
+
+.partner-item {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+/* end Partner */
+
+/* Working Process */
+.workProc-card__list {
+  display: flex;
+  gap: 100px;
+  margin-top: 40px;
+}
+
+.workProc-card__item {
+  flex: 1;
+  text-align: center;
+}
+
+.workProc-card__numberWrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+}
+
+.workProc-card__number {
+  background: var(--gray);
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.workProc-card__logo {
+  margin-top: 16px;
+  margin-inline: auto; /*trái, phải*/
+}
+
+.workProc-card__title {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.workProc-card__desc {
+  margin-top: 8px;
+  font-size: 14px;
+}
+/* end Working Process */
+
+/* Sub banner */
+.subBanner-wrap {
+  margin-top: 116px;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden; /*che các phần bị dư ra*/
+  background: linear-gradient(221deg, #0cc64b 0%, #26ab5b 76.95%);
+}
+
+.subBanner__left {
+  padding: 26px 40px;
+  flex: 1; /* để nd lắp đầy không gian còn trống */
+  display: flex;
+  align-items: center;
+  background: linear-gradient(221deg, #0cc64b 0%, #26ab5b 76.95%);
+  gap: 16px;
+  color: white;
+}
+
+.subBanner__title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.subBanner__desc {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.subBanner__right {
+  width: 233px;
+  padding: 26px 40px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+}
+/* end Sub banner */
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__form {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer__input {
+  padding: 16px;
+  min-width: 252px;
+  background-color: white;
+  border: 1 solid var(--light-gray2);
+  border-radius: 8px;
+}
+
+.footer__formBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ef463a 0%, #fca939 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+}
+
+.footer__total {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.footer__totalItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer__totalNumberWrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__totalNumber {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-primary);
+  font-weight: 700;
+}
+
+.footer__totalText {
+  font-weight: 400;
+  color: var(--gray);
+}
+
+.footer__body {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--light-gray2);
+}
+
+.footer__list {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-list__item {
+  flex: 1;
+}
+
+.footer__logo {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--light-gray2);
+}
+
+.footer-socialList {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer-body__title {
+  font-style: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.footer-body__desc,
+.footer-body__subLink {
+  color: var(--gray);
+}
+
+.footer-body__subLink:hover {
+  color: var(--primary);
+}
+
+.footer-body__subLink {
+  transition: linear 0.2s;
+}
+
+.footer-body__subList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+/* end Footer */
+
+.copyright {
+  text-align: center;
+  font-size: 18px;
+  color: var(--gray);
+  font-weight: 400;
+  margin-bottom: 100px;
+}
